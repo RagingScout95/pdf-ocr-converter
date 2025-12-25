@@ -254,7 +254,7 @@ This will automatically:
 
 **Step 2: Convert Your First PDF**
 ```bash
-python pdf_to_markdown.py "../sem1/Accounting for Managers/Accounting for Managers (1st Module Assessment).pdf"
+python pdf_to_markdown.py "path/to/your/document.pdf"
 ```
 
 **Step 3: Find Your Output**
@@ -275,10 +275,10 @@ The output markdown file will be created in the same location as the PDF with a 
 
 **Example:**
 ```bash
-python pdf_to_markdown.py "../sem1/Accounting for Managers/Accounting for Managers (1st Module Assessment).pdf"
+python pdf_to_markdown.py "documents/assignment.pdf"
 ```
 
-This creates: `Accounting for Managers (1st Module Assessment).md` in the same folder.
+This creates: `documents/assignment.md` in the same folder.
 
 ### Specify Custom Output Location
 
@@ -305,20 +305,20 @@ python pdf_to_markdown.py "document.pdf" --dpi 400
 
 ### Real-World Examples
 
-**Example 1: Convert Assignment PDF**
+**Example 1: Convert Document PDF**
 ```bash
-python pdf_to_markdown.py "../sem1/Accounting for Managers/Accounting for Managers (3rd Module Assessment).pdf"
+python pdf_to_markdown.py "documents/report.pdf"
 ```
 
 **Example 2: Convert with Custom Output**
 ```bash
-python pdf_to_markdown.py "../sem1/Accounting for Managers/Assessment.pdf" "../output/Assessment_Text.md"
+python pdf_to_markdown.py "documents/document.pdf" "output/converted_document.md"
 ```
 
 **Example 3: Convert Multiple PDFs (Using Batch Script)**
 ```bash
 # For Windows PowerShell
-Get-ChildItem "../sem1/Accounting for Managers/*.pdf" | ForEach-Object {
+Get-ChildItem "documents/*.pdf" | ForEach-Object {
     python pdf_to_markdown.py $_.FullName
 }
 ```
@@ -503,20 +503,20 @@ pdf-ocr-converter/
 
 ## 📝 Example Workflow
 
-### Complete Example: Converting an Assignment PDF
+### Complete Example: Converting a PDF Document
 
 ```bash
-# Step 1: Navigate to scripts folder
-cd C:\Users\prakh\Desktop\Amity\scripts
+# Step 1: Navigate to pdf-ocr-converter folder
+cd pdf-ocr-converter
 
 # Step 2: Convert PDF to Markdown
-python pdf_to_markdown.py "../sem1/Accounting for Managers/Accounting for Managers (3rd Module Assessment).pdf"
+python pdf_to_markdown.py "documents/report.pdf"
 
 # Step 3: Output will be created at:
-# ../sem1/Accounting for Managers/Accounting for Managers (3rd Module Assessment).md
+# documents/report.md
 
 # Step 4: Or specify custom output location
-python pdf_to_markdown.py "../sem1/Accounting for Managers/Assessment.pdf" "../output/Assessment.md"
+python pdf_to_markdown.py "documents/document.pdf" "output/converted_document.md"
 ```
 
 ### What You'll See:
@@ -526,8 +526,8 @@ python pdf_to_markdown.py "../sem1/Accounting for Managers/Assessment.pdf" "../o
 PDF to Markdown Converter
 ================================================================================
 
-Input PDF:  C:\Users\prakh\Desktop\Amity\sem1\Accounting for Managers\Assessment.pdf
-Output MD:  C:\Users\prakh\Desktop\Amity\output\Assessment.md
+Input PDF:  documents/report.pdf
+Output MD:  output/report.md
 
 Found Poppler at: C:\poppler\Library\bin
 Poppler: OK
@@ -549,7 +549,7 @@ Step 3: Saving to markdown file...
 ================================================================================
 Conversion Complete!
 ================================================================================
-Output saved to: C:\Users\prakh\Desktop\Amity\output\Assessment.md
+Output saved to: output/report.md
 Total pages processed: 41
 Total characters extracted: 20,065
 ================================================================================
@@ -604,9 +604,9 @@ For someone completely new, follow these steps:
 
 1. ✅ **Install Python** (if not already installed)
 2. ✅ **Open terminal/command prompt**
-3. ✅ **Navigate to scripts folder:**
+3. ✅ **Navigate to pdf-ocr-converter folder:**
    ```bash
-   cd C:\Users\prakh\Desktop\Amity\scripts
+   cd pdf-ocr-converter
    ```
 4. ✅ **Install dependencies:**
    ```bash
