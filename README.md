@@ -462,19 +462,16 @@ pip install pdf2image pytesseract pillow
 ## 📁 Project Structure
 
 ```
-Amity/
-├── pdf-ocr-converter/                # All Python scripts here
-│   ├── pdf_to_markdown.py           # Main conversion script (USE THIS)
-│   ├── pdf_ocr_extractor.py         # Core OCR library
-│   ├── install_ocr_dependencies.bat # Windows dependency installer
-│   ├── install_ocr_dependencies.sh  # Linux/Mac dependency installer
-│   ├── requirements.txt              # Python packages
-│   ├── README.md                     # This file
-│   └── ...
-├── output/                            # Converted markdown files
-│   └── *.md files
-└── sem1/                              # Your study materials
-    └── ...
+pdf-ocr-converter/
+├── pdf_to_markdown.py           # Main conversion script (USE THIS)
+├── pdf_ocr_extractor.py         # Core OCR library
+├── install_ocr_dependencies.bat # Windows dependency installer
+├── install_ocr_dependencies.sh  # Linux/Mac dependency installer
+├── requirements.txt              # Python packages
+├── LICENSE                       # MIT License
+├── .gitignore                    # Git ignore rules
+├── README.md                     # This file
+└── README_OCR_Setup.md           # Detailed setup instructions
 ```
 
 ---
@@ -486,8 +483,8 @@ Amity/
    - Check the output quality before processing large files
 
 2. **Organize Output:**
-   - Use the `output/` folder for all converted files
    - Keep original PDFs separate from converted markdown files
+   - Create a dedicated folder for converted files if needed
 
 3. **Quality vs Speed:**
    - Use DPI 300 for most documents (balanced)
